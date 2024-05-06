@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selected Processes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Selected Processes</h1>
+    </header>
+    <div class="container">
+        {% if selected_shaping_process.empty and selected_joining_process.empty and selected_finishing_process.empty %}
+            <p>No process applicable</p>
+        {% else %}
+            <h1>Selected Shaping Processes</h1>
+            <ul>
+                {% for index, row in selected_shaping_process.iterrows() %}
+                    <li>
+                        <strong>{{ row['']['Process_Type'] }}:</strong> 
+                        <a href="{{ url_for('process_details', process_name=row['']['Process_Name']) }}">{{ row['']['Process_Name'] }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+            
+            <h1>Selected Joining Processes</h1>
+            <ul>
+                {% for index, row in selected_joining_process.iterrows() %}
+                    <li>
+                        <strong>{{ row['']['Process_Type'] }}:</strong> 
+                        <a href="{{ url_for('process_details', process_name=row['']['Process_Name']) }}">{{ row['']['Process_Name'] }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+
+            <h1>Selected Finishing Processes</h1>
+            <ul>
+                {% for index, row in selected_finishing_process.iterrows() %}
+                    <li>
+                        <strong>{{ row['']['Process_Type'] }}:</strong> 
+                        <a href="{{ url_for('process_details', process_name=row['']['Process_Name']) }}">{{ row['']['Process_Name'] }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
+    <footer>
+        <a href="{{ url_for('process_selection') }}">Back to Selection Form</a>
+        <p>&copy; 2024 material and process selection </p>
+    </footer>
+</body>
+</html>

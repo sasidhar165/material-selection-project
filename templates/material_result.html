@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selected Materials</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Selected Materials</h1>
+    </header>
+    <div class="container">
+        {% for material in selected_materials %}
+            <p>{{ material }}</p>
+        {% endfor %}
+
+        <a href="/material_selection">Back to Material Selection Page</a>
+    </div>
+    <footer>
+        <p>&copy; 2024 Your Company</p>
+    </footer>
+</body>
+</html>

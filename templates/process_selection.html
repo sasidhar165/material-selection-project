@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Process Selection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Process Selection</h1>
+    </header>
+    <div class="container">
+        <form action="{{ url_for('process_selection') }}" method="post">
+            <label for="material_name">Material Name:</label>
+            <select id="material_name" name="material_name">
+                <option value="Cast Irons">Cast Irons</option>
+                <option value="High Carbon Steels">High Carbon Steels</option>
+                <option value="Medium Carbon Steels">Medium Carbon Steels</option>
+                <option value="Low Carbon Steels">Low Carbon Steels</option>
+                <option value="Low Alloy Steels">Low Alloy Steels</option>
+                <option value="Stainless Steels">Stainless Steels</option>
+                <option value="Aluminium Alloys">Aluminium Alloys</option>
+                <option value="Copper Alloys">Copper Alloys</option>
+                <option value="Lead Alloys">Lead Alloys</option>
+                <option value="Magnesium Alloys">Magnesium Alloys</option>
+                <option value="Nickel Alloys">Nickel Alloys</option>
+                <option value="Titanium Alloys">Titanium Alloys</option>
+                <option value="Zinc Alloys">Zinc Alloys</option>
+                <option value="Borosilicate Glass">Borosilicate Glass</option>
+                <option value="Glass Ceramic">Glass Ceramic</option>
+                <option value="Silica Glass">Silica Glass</option>
+                <option value="Soda-Lime Glass">Soda-Lime Glass</option>
+                <option value="Concrete, typical">Concrete, typical</option>
+                <option value="Stone">Stone</option>
+                <option value="Alumina">Alumina</option>
+                <option value="Aluminium Nitride">Aluminium Nitride</option>
+                <option value="Silicon Carbide">Silicon Carbide</option>
+                <option value="Silicon Nitride">Silicon Nitride</option>
+                <option value="Tungsten Carbide">Tungsten Carbide</option>
+                <option value="Aluminium/Silicon Carbide">Aluminium/Silicon Carbide</option>
+                <option value="CFRP">CFRP</option>
+                <option value="GFRP">GFRP</option>
+                <option value="Bamboo">Bamboo</option>
+                <option value="Cork">Cork</option>
+                <option value="Leather">Leather</option>
+                <option value="Wood">Wood</option>
+                <option value="Butyl Rubber">Butyl Rubber</option>
+                <option value="EVA">EVA</option>
+                <option value="Isoprene (IR)">Isoprene (IR)</option>
+                <option value="Natural Rubber (NR)">Natural Rubber (NR)</option>
+                <option value="Neoprene (CR)">Neoprene (CR)</option>
+                <option value="Polyurethane Elastomers">Polyurethane Elastomers</option>
+                <option value="Silicone Elastomers">Silicone Elastomers</option>
+                <option value="ABS">ABS</option>
+                <option value="Cellulose Polymers">Cellulose Polymers</option>
+                <option value="Ionomer (I)">Ionomer (I)</option>
+                <option value="Nylons (PA)">Nylons (PA)</option>
+                <option value="Polycarbonate (PC)">Polycarbonate (PC)</option>
+                <option value="PEEK">PEEK</option>
+                <option value="Polyethylene (PE)">Polyethylene (PE)</option>
+                <option value="PET">PET</option>
+                <option value="Acrylic (PMMA)">Acrylic (PMMA)</option>
+                <option value="Acetal (POM)">Acetal (POM)</option>
+                <option value="Polypropylene (PP)">Polypropylene (PP)</option>
+                <option value="Polystyrene (PS)">Polystyrene (PS)</option>
+                <option value="Polyurethane Thermoplastics">Polyurethane Thermoplastics</option>
+                <option value="PVC">PVC</option>
+                <option value="Teflon (PTFE)">Teflon (PTFE)</option>
+                <option value="Epoxies">Epoxies</option>
+                <option value="Phenolics">Phenolics</option>
+                <option value="Polyester">Polyester</option>
+                <option value="Flexible Polymer Foam (VLD)">Flexible Polymer Foam (VLD)</option>
+                <option value="Flexible Polymer Foam (LD)">Flexible Polymer Foam (LD)</option>
+                <option value="Flexible Polymer Foam (MD)">Flexible Polymer Foam (MD)</option>
+                <option value="Rigid Polymer Foam (LD)">Rigid Polymer Foam (LD)</option>
+                <option value="Rigid Polymer Foam (MD)">Rigid Polymer Foam (MD)</option>
+                <option value="Rigid Polymer Foam (HD)">Rigid Polymer Foam (HD)</option>
+            </select>
+            <br>
+            <label for="section_thickness">Section Thickness (mm):</label>
+            <input type="number" id="section_thickness" name="section_thickness">
+            <br>
+            <label for="mass">Mass (kg):</label>
+            <input type="number" id="mass" name="mass">
+            <br>
+            <label for="tolerance">Tolerance (mm):</label>
+            <input type="number" id="tolerance" name="tolerance">
+            <br>
+            <label for="roughness">Roughness (µm):</label>
+            <input type="number" id="roughness" name="roughness">
+            <br>
+            <label for="batch_size">Economic Batch Size:</label>
+            <input type="number" id="batch_size" name="batch_size">
+            <br>
+            <input type="submit" value="Submit">
+            <a href="{{ url_for('index') }}">Home</a>
+        </form>
+    </div>
+    <footer>
+        <p>&copy; 2024 Your Company</p>
+    </footer>
+</body>
+</html>

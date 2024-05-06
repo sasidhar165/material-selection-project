@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Material Selection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Material Selection</h1>
+    </header>
+    <div class="container">
+        <form action="/material_selection" method="POST">
+            <label for="material_index_limit">Material Index Limit:</label>
+            <input type="number" id="material_index_limit" name="material_index_limit" step="any"><br><br>
+            
+            <label for="co2_limit">CO2 Equivalent Limit:</label>
+            <input type="number" id="co2_limit" name="co2_limit" step="any"><br><br>
+            
+            <label for="cost_limit">Cost Limit:</label>
+            <input type="number" id="cost_limit" name="cost_limit" step="any"><br><br>
+
+            <input type="submit" value="Submit">
+            <a href="{{ url_for('index') }}">Home</a>
+        </form>
+    </div>
+    <footer>
+        <p>&copy; 2024 Your Company</p>
+    </footer>
+</body>
+</html>
