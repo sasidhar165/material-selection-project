@@ -146,5 +146,4 @@ def process_details(process_name):
 
         # Render a template to display the details
         return render_template('process_details.html', process_name=process_name, definition=definition, comments=comments)
-if __name__ == '__main__':
-    app.run(debug=True)
+
